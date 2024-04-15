@@ -220,3 +220,6 @@ Write sketches to draw the following shapes:
 ![Sketch](images/pizza.png)
 
 ![Sketch](images/p1.2.png)
+
+
+![Design for music board](1713182703287.jpg)
