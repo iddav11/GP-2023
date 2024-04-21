@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bv8chl0rnk5kb"
+path="res://.godot/imported/Fear Not This Night for Piano Solo  Guild Wars 2  Kyle Landry.mp3-6eb8410a52e5b2202aa421569d7e031f.mp3str"
+
+[deps]
+
+source_file="res://Fear Not This Night for Piano Solo  Guild Wars 2  Kyle Landry.mp3"
+dest_files=["res://.godot/imported/Fear Not This Night for Piano Solo  Guild Wars 2  Kyle Landry.mp3-6eb8410a52e5b2202aa421569d7e031f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

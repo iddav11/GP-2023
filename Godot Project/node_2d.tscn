@@ -1,0 +1,200 @@
+[gd_scene load_steps=11 format=3 uid="uid://cl6kj4ip8jgqw"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_aey5p"]
+[ext_resource type="AudioStream" uid="uid://bv8chl0rnk5kb" path="res://Fear Not This Night for Piano Solo  Guild Wars 2  Kyle Landry.mp3" id="2_4oxmy"]
+[ext_resource type="Script" path="res://NewPiskel_anim.gd" id="3_5fbb7"]
+[ext_resource type="AudioStream" uid="uid://bo8ejknnobwm0" path="res://583729__warped_tension__suspense_bass.wav" id="3_guucl"]
+[ext_resource type="AudioStream" uid="uid://bn0do7cia6rwb" path="res://117691__kyster__1-oct-f.wav" id="4_nefc3"]
+[ext_resource type="Texture2D" uid="uid://ckh08xymtqjol" path="res://New Piskel-1.png (1).png" id="5_ul8ir"]
+[ext_resource type="Texture2D" uid="uid://tpp0fcxs3rw2" path="res://New Piskel.png" id="6_fr6yf"]
+
+[sub_resource type="Animation" id="Animation_f70n7"]
+resource_name = "Bounce_in"
+length = 0.43
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.18, 0.29, 0.37),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_md2uj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6njt6"]
+_data = {
+"Bounce_in": SubResource("Animation_f70n7"),
+"RESET": SubResource("Animation_md2uj")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NewPiskel-1_png(1)" type="Sprite2D" parent="."]
+position = Vector2(587, 323)
+scale = Vector2(2.28027, 1.25781)
+texture = ExtResource("5_ul8ir")
+
+[node name="NewPiskel" type="Sprite2D" parent="."]
+position = Vector2(583.5, 322)
+scale = Vector2(2.29102, 1.28125)
+texture = ExtResource("6_fr6yf")
+hframes = 5
+script = ExtResource("3_5fbb7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NewPiskel"]
+libraries = {
+"": SubResource("AnimationLibrary_6njt6")
+}
+
+[node name="Button" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 21.0
+offset_top = 323.0
+offset_right = 77.0
+offset_bottom = 635.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button"]
+stream = ExtResource("2_4oxmy")
+
+[node name="Button2" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 93.0
+offset_top = 321.0
+offset_right = 189.0
+offset_bottom = 636.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button2"]
+stream = ExtResource("3_guucl")
+
+[node name="Button3" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 204.0
+offset_top = 323.0
+offset_right = 296.0
+offset_bottom = 636.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button3"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button4" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 312.0
+offset_top = 324.0
+offset_right = 404.0
+offset_bottom = 637.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button4"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button5" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 423.0
+offset_top = 321.0
+offset_right = 515.0
+offset_bottom = 634.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button5"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button6" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 531.0
+offset_top = 321.0
+offset_right = 623.0
+offset_bottom = 634.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button6"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button7" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 643.0
+offset_top = 323.0
+offset_right = 735.0
+offset_bottom = 636.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button7"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button8" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 749.0
+offset_top = 321.0
+offset_right = 841.0
+offset_bottom = 634.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button8"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button9" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 859.0
+offset_top = 320.0
+offset_right = 951.0
+offset_bottom = 633.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button9"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button10" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 971.0
+offset_top = 324.0
+offset_right = 1063.0
+offset_bottom = 637.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button10"]
+stream = ExtResource("4_nefc3")
+
+[node name="Button11" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 1078.0
+offset_top = 324.0
+offset_right = 1153.0
+offset_bottom = 637.0
+script = ExtResource("1_aey5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button11"]
+stream = ExtResource("4_nefc3")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
+[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
+[connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
+[connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
+[connection signal="pressed" from="Button9" to="Button9" method="_on_pressed"]
+[connection signal="pressed" from="Button10" to="Button10" method="_on_pressed"]
+[connection signal="pressed" from="Button11" to="Button11" method="_on_pressed"]
